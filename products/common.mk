@@ -14,6 +14,15 @@ PRODUCT_PACKAGE_OVERLAYS += \
 PRODUCT_PACKAGES += \
     Busybox
 
+# Oneofakind™ Home
+ifneq ($(filter oneofakind_nozomi oneofakind_devices-with-no-navigation-bar,$(TARGET_PRODUCT)),)
+PRODUCT_PACKAGES += \
+    OneofakindHome
+else
+PRODUCT_PACKAGES += \
+    OneofakindHomeOsb
+endif
+
 # SuperSU
 PRODUCT_COPY_FILES += \
     vendor/oneofakind/prebuilt/common/etc/UPDATE-SuperSU.zip:system/addon.d/UPDATE-SuperSU.zip
