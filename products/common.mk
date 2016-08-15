@@ -3,6 +3,15 @@ PRODUCT_NAME := oneofakind
 PRODUCT_BRAND := oneofakind
 PRODUCT_DEVICE := generic
 
+PRODUCT_PROPERTY_OVERRIDES += \
+    keyguard.no_require_sim=true \
+    ro.url.legal=http://www.google.com/intl/%s/mobile/android/basic/phone-legal.html \
+    ro.url.legal.android_privacy=http://www.google.com/intl/%s/mobile/android/basic/privacy.html \
+    ro.com.google.clientidbase=android-google \
+    ro.com.android.wifi-watchlist=GoogleGuest \
+    ro.com.android.dataroaming=false \
+    ro.adb.secure=1
+
 # Common overlay
 PRODUCT_PACKAGE_OVERLAYS += \
     vendor/oneofakind/overlay/common
