@@ -21,7 +21,8 @@ PRODUCT_PACKAGE_OVERLAYS += \
 
 # Extra packages
 PRODUCT_PACKAGES += \
-    Busybox
+    Busybox \
+    Music
 
 # Oneofakind™ Home
 ifneq ($(filter oneofakind_nozomi oneofakind_devices-with-no-navigation-bar,$(TARGET_PRODUCT)),)
